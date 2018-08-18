@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Testing Testing Testing</title>
+    <title>psychic Game</title>
 </head>
 
 <body>
@@ -29,6 +29,7 @@
     <div class="col-md-3">
     </div>
     <script>
+        // Below block was created to genrate the random letter. 
         // document.getElementById("rndletter").addEventListener("click", function () {
         //     var result = String.fromCharCode(Math.floor(Math.random() * (122 - 97)) + 97);
         //     document.getElementById("result").innerText = result;
@@ -96,14 +97,14 @@
                         wins++;
                         document.querySelector('#wins').innerHTML = "Wins: " + wins;
                         userGuess = userGuess.toUpperCase();
-                        alert("Yes, you are psychic! Mantis has chosen " + userGuess);
+                        alert("Computer guessed " + userGuess);
+                        document.writeln("Computer guessed " + userGuess);
                         reset();
                     }
                 } else if (guessesLeft == 0) {
                     // Then we will loss and we'll update the html to display the loss 
                     losses++;
                     document.querySelector('#losses').innerHTML = "Losses: " + losses;
-                    alert("Sorry, you're not psychic, maybe try again?");
                     // Then we'll call the reset. 
                     reset();
                 }
@@ -115,9 +116,9 @@
         };
     </script>
 
-
-    <button id="rndletter">Generate random letter</button>
-    <div id="result"></div>
+    <!-- Button below didnt work -->
+    <!-- <button id="rndletter">Generate random letter</button>
+    <div id="result"></div> -->
 
 </body>
 
