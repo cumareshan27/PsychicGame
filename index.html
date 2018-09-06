@@ -76,12 +76,18 @@
 
         updateLetterToGuess();
         updateGuessesLeft();
+        
+        function charccompare (){
+            if (computerGuess=== ) 
+        }
 
         //When key is released it becomes the users guess
         document.onkeyup = function (event) {
             var userGuess = String.fromCharCode(event.keyCode).toLowerCase();
-            var check = computerChoices.includes(userGuess);
+           // var check = computerChoices.includes(userGuess);
+            var check = computerChoices.find(userGuess);
 
+                console.log("my check is:- " + check);
             if (check === false) {
                 alert("That was not a valid guess, try again?");
                 return false;
@@ -96,7 +102,7 @@
                     if (userGuess == letterToGuess) {
                         wins++;
                         document.querySelector('#wins').innerHTML = "Wins: " + wins;
-                        userGuess = userGuess.toUpperCase();
+                        userGuess = userGuess.toLowerCase();
                         alert("Computer guessed " + userGuess);
                         document.writeln("Computer guessed " + userGuess);
                         reset();
