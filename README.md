@@ -1,2 +1,2 @@
 # PsychicGame
-Test Test Test
+This game is delivered using Java Script 
